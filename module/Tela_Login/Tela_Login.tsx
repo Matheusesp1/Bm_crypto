@@ -54,8 +54,9 @@
 // export default LoginScreen;
 
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native';
 import { api } from '../API/mokapi'; // Importar o mockApi
+import styles from './styles';
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
@@ -99,31 +100,31 @@ const LoginScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#10101A',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  headerText: {
-    color: 'white',
-    fontSize: 20,
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  input: {
-    backgroundColor: 'white',
-    width: 200,
-    height: 40,
-    margin: 10,
-    paddingLeft: 10,
-    borderRadius: 5,
-  },
-  linkText: {
-    color: 'white',
-    marginTop: 10,
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#10101A',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+//   headerText: {
+//     color: 'white',
+//     fontSize: 20,
+//     marginTop: 10,
+//     marginBottom: 20,
+//   },
+//   input: {
+//     backgroundColor: 'white',
+//     width: 200,
+//     height: 40,
+//     margin: 10,
+//     paddingLeft: 10,
+//     borderRadius: 5,
+//   },
+//   linkText: {
+//     color: 'white',
+//     marginTop: 10,
+//   },
+// });
 
 export default LoginScreen;
