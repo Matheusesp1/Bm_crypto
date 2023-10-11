@@ -1,3 +1,48 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from './module/Tela_Login/Tela_Login';
+import SignUpScreen from './module/Tela_Cadastro/Tela_Cadasto';
+import CryptoScreen from './module/TelaCrypto/Tela_Crypto'; // Importe a tela de criptomoedas
+
+const Stack = createNativeStackNavigator();
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="CryptoScreen" component={CryptoScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;
+
+
+// import React from 'react';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import LoginScreen from './module/Tela_Login/Tela_Login';
+// import SignUpScreen from './module/Tela_Cadastro/Tela_Cadasto';
+
+// const Stack = createNativeStackNavigator();
+
+// const App = () => {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator>
+//         <Stack.Screen name="Login" component={LoginScreen} />
+//         <Stack.Screen name="SignUp" component={SignUpScreen} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// };
+
+// export default App;
+
 // import React, { useState } from 'react';
 // import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image, TextInput, Button } from 'react-native';
 
@@ -11,6 +56,10 @@
 //     // Se a autenticação for bem-sucedida, defina isLoggedIn como true
 //     setIsLoggedIn(true);
 //   };
+
+// utilize esse codigo para criar uma tela que tenha as criptomedas que vão ser usadas na nossa aplicação e 
+// gostaria tambem de uma explicação sobre usar a api do yahoo para se obter os dados das criptomoedas e ações 
+// levando em conta tudo em sua implementação
 
 //   return (
 //     <SafeAreaView style={styles.container}>
@@ -308,24 +357,3 @@
 // };
 
 // export default App;
-
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from './module/Tela_Login/Tela_Login';
-import SignUpScreen from './module/Tela_Login/Tela_Cadasto';
-
-const Stack = createNativeStackNavigator();
-
-const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
-
-export default App;
