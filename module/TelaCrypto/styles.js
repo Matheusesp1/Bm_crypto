@@ -1,36 +1,3 @@
-// import { StyleSheet } from "react-native";
-
-// export default StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#10101A',
-//     padding: 20,
-//   },
-//   headerText: {
-//     color: 'white',
-//     fontSize: 24,
-//     marginBottom: 20,
-//   },
-//   cryptoItem: {
-//     backgroundColor: 'red', // Cor de fundo do item de criptomoeda
-//     padding: 20,
-//     borderRadius: 50,
-//     marginBottom: 20,
-//     alignItems: 'center',
-//   },
-//   cryptoName: {
-//     color: 'white',
-//     fontSize: 18,
-//     marginTop: 10,
-//   },
-//   cryptoSymbol: {
-//     color: 'white',
-//     fontSize: 16,
-//     marginTop: 5,
-//   },
-// });
-
-
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
@@ -41,14 +8,14 @@ export default StyleSheet.create({
   },
   headerText: {
     color: 'white',
-    fontSize: 24,
+    fontSize: 20,
     marginBottom: 20,
   },
   cryptoCard: {
-    backgroundColor: 'red',
-    padding: 20,
-    borderRadius: 50,
-    marginBottom: 20,
+    backgroundColor: 'white',
+    padding: 0,
+    borderRadius: 7,
+    marginBottom: 7,
     alignItems: 'center',
   },
   cryptoIcon: {
@@ -56,7 +23,7 @@ export default StyleSheet.create({
     height: 50,
   },
   cryptoName: {
-    color: 'white',
+    color: 'black',
     fontSize: 18,
     marginTop: 10,
   },
@@ -65,4 +32,22 @@ export default StyleSheet.create({
     fontSize: 16,
     marginTop: 5,
   },
+  chatButton: {
+    position: 'absolute',
+    bottom: '30%',  
+    right: '1%',  
+    backgroundColor: 'white',
+    width: '15%',  
+    height: '15%', 
+    borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  chatButtonText: {
+    color: 'black',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+
 });

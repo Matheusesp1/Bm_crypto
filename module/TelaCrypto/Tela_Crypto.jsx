@@ -2,26 +2,36 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import styles from '../TelaCrypto/styles';
 
+
 const CryptoScreen = ({ navigation }) => {
   const cryptoList = [
-    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
-    { name: 'Ethereum', icon: require('../assets/eth.png') },
-    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
-    { name: 'Ethereum', icon: require('../assets/eth.png') },
-    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
-    { name: 'Ethereum', icon: require('../assets/eth.png') },
-    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
-    { name: 'Ethereum', icon: require('../assets/eth.png') },
+    { name: 'Bitcoin', price: 5000 , icon: require('../assets/bitcoin.png') },
+    { name: 'Ethereum', price: 4000, icon: require('../assets/eth.png') },
+    { name: 'Bitcoin', price: 3000, icon: require('../assets/bitcoin.png') },
+    { name: 'Ethereum', price: 2000, icon: require('../assets/eth.png') },
+    // { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
+    // { name: 'Ethereum', icon: require('../assets/eth.png') },
+    // { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
+    // { name: 'Ethereum', icon: require('../assets/eth.png') },
   ];
 
   const handleCryptoSelection = (crypto) => {
     // Navegar para a tela de compra/venda com a criptomoeda selecionada
-    navigation.navigate('CompraVenda', { crypto });
+    // navigation.navigate('CompraVenda', { crypto });
+    // navigation.navigate('ChatScreen')
+  };
+  const goToChatScreen = () => {
+    navigation.navigate('ChatScreen')
   };
 
   return (
     <View style={styles.container}>
+    <View style={styles.headerContainer}>
       <Text style={styles.headerText}>Escolha uma Criptomoeda</Text>
+      <TouchableOpacity style={styles.chatButton} onPress={goToChatScreen}>
+        <Text style={styles.chatButtonText}>Chat!</Text>
+      </TouchableOpacity>
+    </View>
       {cryptoList.map((crypto) => (
         <TouchableOpacity
           key={crypto.symbol}
@@ -31,7 +41,9 @@ const CryptoScreen = ({ navigation }) => {
           <Image source={crypto.icon} style={styles.cryptoIcon} />
           <Text style={styles.cryptoName}>{crypto.name}</Text>
           <Text style={styles.cryptoSymbol}>{crypto.symbol}</Text>
+          <Text>Price: ${crypto.price}</Text>
         </TouchableOpacity>
+    
       ))}
     </View>
   );
