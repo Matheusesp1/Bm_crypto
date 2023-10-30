@@ -9,9 +9,9 @@ export default StyleSheet.create({
     },
     headerText: {
       color: 'white',
-      fontSize: 54,
+      fontSize: 20,
       marginBottom: 10,
-      fontFamily: 'BebasNeue_400Regular',
+      // fontFamily: 'BebasNeue_400Regular',
     },
     input: {
       backgroundColor: 'white',

@@ -20,7 +20,7 @@ const SignUpScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-          <Text style={styles.headerText}>CADASTRO</Text>
+          <Text style={styles.headerText}>Cadastro</Text>
           <TextInput
             style={styles.input}
             placeholder="Nome Completo"
