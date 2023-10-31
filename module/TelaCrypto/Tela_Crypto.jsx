@@ -16,9 +16,9 @@ const CryptoScreen = ({ navigation }) => {
   ];
 
   const handleCryptoSelection = (crypto) => {
-    // Navegar para a tela de compra/venda com a criptomoeda selecionada
+    // Navegaçao para a tela de compra/venda com a criptomoeda selecionada
     navigation.navigate('BuyScreen', { crypto });
-    // navigation.navigate('BuyScreen')
+  
   };
   const goToChatScreen = () => {
     navigation.navigate('ChatScreen')
