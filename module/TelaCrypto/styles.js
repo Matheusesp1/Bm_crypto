@@ -21,6 +21,8 @@ export default StyleSheet.create({
   cryptoIcon: {
     width: 50,
     height: 50,
+    borderRadius: 50,
+      
   },
   cryptoName: {
     color: 'black',
@@ -31,6 +33,7 @@ export default StyleSheet.create({
     color: 'white',
     fontSize: 16,
     marginTop: 5,
+    
   },
   chatButton: {
     position: 'absolute',

@@ -7,8 +7,8 @@ const CryptoScreen = ({ navigation }) => {
   const cryptoList = [
     { name: 'Bitcoin', price: 5000 , icon: require('../assets/bitcoin.png') },
     { name: 'Ethereum', price: 4000, icon: require('../assets/eth.png') },
-    { name: 'Bitcoin', price: 3000, icon: require('../assets/bitcoin.png') },
-    { name: 'Ethereum', price: 2000, icon: require('../assets/eth.png') },
+    { name: 'Litcoin', price: 3000, icon: require('../assets/litcoin.png') },
+    { name: 'Stellar', price: 2000, icon: require('../assets/stellarcoin.png') },
     // { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
     // { name: 'Ethereum', icon: require('../assets/eth.png') },
     // { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
@@ -41,7 +41,7 @@ const CryptoScreen = ({ navigation }) => {
           <Image source={crypto.icon} style={styles.cryptoIcon} />
           <Text style={styles.cryptoName}>{crypto.name}</Text>
           <Text style={styles.cryptoSymbol}>{crypto.symbol}</Text>
-          <Text>Price: ${crypto.price}</Text>
+          {/* <Text>Price: ${crypto.price}</Text> */}
         </TouchableOpacity>
     
       ))}

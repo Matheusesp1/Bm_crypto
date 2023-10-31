@@ -5,7 +5,7 @@ import styles from '../Tela_Compra/styles';
 
 const BuyScreen = () => {
   const cryptoImag = require('../assets/bitcoin.png'); 
-  const cryptovalue = 5000; 
+  const cryptovalue = 173.66718; 
 
   const handleBuy = () => {
     // Lógica para a ação de compra
