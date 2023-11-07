@@ -2,77 +2,42 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styles from '../TelaCrypto/styles';
 
+
 const CryptoScreen = ({ navigation }) => {
   const cryptoList = [
-    { 
-      name: 'Bitcoin', 
-      description: 'Descrição do Bitcoin', 
-      type: 'Tipo da Criptomoeda', 
-      value: 'Valor em USD',
-      symbol: 'BTC', 
-      icon: require('../assets/bitcoin.png') 
-    },
-    { 
-      name: 'Ethereum', 
-      description: 'Descrição do Ethereum', 
-      type: 'Tipo da Criptomoeda', 
-      value: 'Valor em USD',
-      symbol: 'ETH', 
-      icon: require('../assets/eth.png') 
-    },
-    { 
-      name: 'Bitcoin', 
-      description: 'Descrição do Bitcoin', 
-      type: 'Tipo da Criptomoeda', 
-      value: 'Valor em USD',
-      symbol: 'BTC', 
-      icon: require('../assets/bitcoin.png') 
-    },
-    { 
-      name: 'Ethereum', 
-      description: 'Descrição do Ethereum', 
-      type: 'Tipo da Criptomoeda', 
-      value: 'Valor em USD',
-      symbol: 'ETH', 
-      icon: require('../assets/eth.png') 
-    },
-    { 
-      name: 'Bitcoin', 
-      description: 'Descrição do Bitcoin', 
-      type: 'Tipo da Criptomoeda', 
-      value: 'Valor em USD',
-      symbol: 'BTC', 
-      icon: require('../assets/bitcoin.png') 
-    },
-
-
-    // Adicione mais criptomoedas conforme necessário
+    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
+    { name: 'Ethereum', icon: require('../assets/eth.png') },
+    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
+    { name: 'Ethereum', icon: require('../assets/eth.png') },
+    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
+    { name: 'Ethereum', icon: require('../assets/eth.png') },
+    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
+    { name: 'Ethereum', icon: require('../assets/eth.png') },
   ];
 
   const handleCryptoSelection = (crypto) => {
-    // Navegar para a tela de compra/venda com a criptomoeda selecionada
-    navigation.navigate('CompraVenda', { crypto });
+    // Navegaçao para a tela de compra/venda com a criptomoeda selecionada
+    navigation.navigate('BuyScreen', { crypto });
+  
+  };
+  const goToChatScreen = () => {
+    navigation.navigate('ChatScreen')
   };
 
   return (
     <View style={styles.container}>
+    <View style={styles.headerContainer}>
       <Text style={styles.headerText}>Escolha uma Criptomoeda</Text>
-      {cryptoList.map((crypto, index) => (
-        <View key={index} style={styles.cryptoCard}>
+      {cryptoList.map((crypto) => (
+        <TouchableOpacity
+          key={crypto.symbol}
+          style={styles.cryptoCard}
+          onPress={() => handleCryptoSelection(crypto)}
+        >
           <Image source={crypto.icon} style={styles.cryptoIcon} />
-          <View style={styles.cryptoInfo}>
-            <Text style={styles.cryptoName}>{crypto.name}</Text>
-            <Text style={styles.cryptoDescription}>{crypto.description}</Text>
-            <Text style={styles.cryptoType}>{crypto.type}</Text>
-            <Text style={styles.cryptoValue}>{crypto.value}</Text>
-          </View>
-          <TouchableOpacity
-            style={styles.addButton}
-            onPress={() => handleCryptoSelection(crypto)}
-          >
-            <Text style={styles.addButtonText}>Adicionar</Text>
-          </TouchableOpacity>
-        </View>
+          <Text style={styles.cryptoName}>{crypto.name}</Text>
+          <Text style={styles.cryptoSymbol}>{crypto.symbol}</Text>
+        </TouchableOpacity>
       ))}
     </View>
   );

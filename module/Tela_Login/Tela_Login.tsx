@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Button, TouchableOpacity, Image } from 'react-native';
 import { api } from '../API/mokapi'; // Importar o mockApi
 import styles from '../Tela_Login/styles';
 
@@ -25,6 +25,10 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <Image
+        source={require('../assets/bm-investimentos.png')}
+        style={styles.logo}
+      />
       <Text style={styles.headerText}>Faça Login</Text>
       <TextInput
         style={styles.input}

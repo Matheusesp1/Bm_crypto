@@ -1,4 +1,37 @@
-import { StyleSheet } from 'react-native';
+// import { StyleSheet } from "react-native";
+
+// export default StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#10101A',
+//     padding: 20,
+//   },
+//   headerText: {
+//     color: 'white',
+//     fontSize: 24,
+//     marginBottom: 20,
+//   },
+//   cryptoItem: {
+//     backgroundColor: 'red', // Cor de fundo do item de criptomoeda
+//     padding: 20,
+//     borderRadius: 50,
+//     marginBottom: 20,
+//     alignItems: 'center',
+//   },
+//   cryptoName: {
+//     color: 'white',
+//     fontSize: 18,
+//     marginTop: 10,
+//   },
+//   cryptoSymbol: {
+//     color: 'white',
+//     fontSize: 16,
+//     marginTop: 5,
+//   },
+// });
+
+
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
@@ -8,11 +41,11 @@ export default StyleSheet.create({
   },
   headerText: {
     color: 'white',
-    fontSize: 24,
+    fontSize: 20,
     marginBottom: 20,
   },
   cryptoCard: {
-    backgroundColor: '#0000CD',
+    backgroundColor: 'red',
     padding: 20,
     borderRadius: 50,
     marginBottom: 20,
@@ -23,6 +56,8 @@ export default StyleSheet.create({
   cryptoIcon: {
     width: 50,
     height: 50,
+    borderRadius: 50,
+      
   },
   cryptoInfo: {
     flexDirection: 'row', // Exibe as informações na mesma linha
@@ -36,8 +71,8 @@ export default StyleSheet.create({
   },
   cryptoName: {
     color: 'white',
-    fontSize: 16,
-    marginLeft: 50, // Espaçamento entre as informações
+    fontSize: 18,
+    marginTop: 10,
   },
   cryptoType: {
     color: 'white',
@@ -57,15 +92,9 @@ export default StyleSheet.create({
   addButtonText: {
     color: 'white',
     fontSize: 16,
+    marginTop: 5,
   },
-  infoContainer: {
-    marginLeft: 100, // Adiciona um espaçamento entre as informações
-  },
-  infoText: {
-    color: 'white',
-    fontSize: 160,
-    marginBottom: 50, // Adiciona um espaçamento entre as informações
-  },
+
 });
 
 
