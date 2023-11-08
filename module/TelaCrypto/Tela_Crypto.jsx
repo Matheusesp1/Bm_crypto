@@ -7,12 +7,12 @@ const CryptoScreen = ({ navigation }) => {
   const cryptoList = [
     { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
     { name: 'Ethereum', icon: require('../assets/eth.png') },
-    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
-    { name: 'Ethereum', icon: require('../assets/eth.png') },
-    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
-    { name: 'Ethereum', icon: require('../assets/eth.png') },
-    { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
-    { name: 'Ethereum', icon: require('../assets/eth.png') },
+    { name: 'Stellar', icon: require('../assets/stellarcoin.png') },
+    { name: 'Litcoin', icon: require('../assets/litcoin.png') },
+    // { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
+    // { name: 'Ethereum', icon: require('../assets/eth.png') },
+    // { name: 'Bitcoin', icon: require('../assets/bitcoin.png') },
+    // { name: 'Ethereum', icon: require('../assets/eth.png') },
   ];
 
   const handleCryptoSelection = (crypto) => {
@@ -28,6 +28,9 @@ const CryptoScreen = ({ navigation }) => {
     <View style={styles.container}>
     <View style={styles.headerContainer}>
       <Text style={styles.headerText}>Escolha uma Criptomoeda</Text>
+      <TouchableOpacity style = {styles.chatButton} onPress = {goToChatScreen}> 
+      <Text style={styles.chatButontext}>chat</Text>
+      </TouchableOpacity>
       {cryptoList.map((crypto) => (
         <TouchableOpacity
           key={crypto.symbol}
