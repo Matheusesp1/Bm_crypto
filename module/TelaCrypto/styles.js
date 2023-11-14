@@ -12,7 +12,7 @@ export default StyleSheet.create({
     marginBottom: 20,
   },
   cryptoCard: {
-    backgroundColor: 'white',
+    backgroundColor: '#A9A9A9',
     padding: 5,
     borderRadius: 50,
     marginBottom: 15,
