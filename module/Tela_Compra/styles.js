@@ -59,7 +59,7 @@ export default StyleSheet.create({
   },
   cryptoName: {
     fontSize: 20,
-    color: 'white', // Adicionando a cor branca ao estilo do nome
+    color: 'white', 
     marginBottom: 40,
   },
   cryptoValue: {
@@ -78,7 +78,7 @@ export default StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: 'green',
+    backgroundColor: 'white',
   },
   sellButton: {
     alignItems: 'center',
@@ -86,6 +86,6 @@ export default StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: 'red',
+    backgroundColor: 'white',
   },
 });
