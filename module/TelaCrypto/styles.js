@@ -61,7 +61,7 @@ export default StyleSheet.create({
     marginTop: 5,
   },
   chatButton: {
-    backgroundColor: 'white',
+    backgroundColor: '#A9A9A9',
     borderRadius: 25,
     paddingVertical: 10,
     paddingHorizontal: 16,
