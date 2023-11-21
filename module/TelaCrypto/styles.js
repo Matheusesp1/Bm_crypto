@@ -61,7 +61,7 @@ export default StyleSheet.create({
     marginTop: 5,
   },
   chatButton: {
-    backgroundColor: '#A9A9A9',
+    backgroundColor: 'white',
     borderRadius: 25,
     paddingVertical: 10,
     paddingHorizontal: 16,
@@ -72,6 +72,22 @@ export default StyleSheet.create({
   chatButtonText: {
     color: 'black',
     textAlign: 'center',
+  },
+  welcomeText: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    marginBottom: 8,
+    color: 'white', 
+    textAlign:"center",
+    width: '100%',
+    
+  },
+  walletValue: {
+    fontSize: 20,
+    color: 'white', 
+    marginBottom: 16,
+    textAlign:"center",
+    width: '100%',
   },
 });
 

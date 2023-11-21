@@ -19,9 +19,13 @@ const CryptoScreen = ({ navigation }) => {
     navigation.navigate('ChatScreen')
   };
 
+
+
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
+      <Text style={styles.welcomeText}>Bem-vindo, Admin </Text>
+        <Text style={styles.walletValue}>Saldo da Carteira: R$100.000 </Text>
         <Text style={styles.headerText}>Escolha uma Criptomoeda</Text>
         <TouchableOpacity style={styles.chatButton} onPress={goToChatScreen}> 
           <Text style={styles.chatButtonText}>Chat</Text>
