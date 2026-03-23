@@ -1,2 +1,2 @@
 # Bm_crypto
-Projeto de Finalização de Curso que esta sendo feito com o proposito de implementar um aplicativo para o ramo de investimento
+Projeto de Conclusão de Curso desenvolvido com o objetivo de implementar um aplicativo voltado ao setor de investimentos, permitindo a consulta e a venda de criptomoedas.
